@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjouterReclamationController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="688.0" prefWidth="796.0" style="-fx-background-color: #DFF3FB;">
+         <children>
+            <Label fx:id="welcome" layoutX="179.0" layoutY="42.0" text="Envoyer Une Reclamation" textFill="#111bd0">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Button fx:id="A" layoutX="265.0" layoutY="571.0" mnemonicParsing="false" onAction="#insert" prefHeight="47.0" prefWidth="120.0" style="-fx-background-color: #1E7FCB; -fx-border-radius: 50; -fx-background-radius: 50;" text="Envoyer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <TextField fx:id="Contenu" layoutX="155.0" layoutY="284.0" prefHeight="163.0" prefWidth="401.0" promptText="Contenu" />
+            <Hyperlink fx:id="prec" layoutX="24.0" layoutY="24.0" onAction="#prec" text="Retour">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Hyperlink>
+            <Label layoutX="164.0" layoutY="89.0" text="Type">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="164.0" layoutY="262.0" text="Contenu">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="Type" layoutX="155.0" layoutY="125.0" prefHeight="55.0" prefWidth="401.0" promptText="Type" />
+            <ComboBox fx:id="usertype" layoutX="155.0" layoutY="481.0" prefHeight="55.0" prefWidth="401.0" promptText="usertype" />
+            <Button fx:id="Timage" layoutX="155.0" layoutY="221.0" mnemonicParsing="false" onAction="#addimgcours" prefHeight="22.0" prefWidth="402.0" text="Browse" />
+            <Label layoutX="172.0" layoutY="191.0" text="Image">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgajoutincours" fitHeight="76.0" fitWidth="112.0" layoutX="603.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="imgpathttt" layoutX="659.0" layoutY="117.0" text="Label" visible="false" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="imgpathttt" layoutX="543.0" layoutY="525.0" text="Label" visible="false" />
+   </children>
+</AnchorPane>

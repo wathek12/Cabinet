@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefWidth="1000.0" style="-fx-background-color: #DFF3FB;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjouterAssuranceController">
+   <children>
+      <Label layoutX="329.0" layoutY="14.0" text="Formulaire de Assurance" textFill="#312696">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="75.0" text="L'identité du bénificaire" textFill="#4d33cd">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="127.0" text="DATE DES SOINS :" textFill="#3a32d3" />
+      <Label layoutX="15.0" layoutY="211.0" text="IDENTIFIANT DE L'ASSURE :" textFill="#3e21bb" />
+      <Label layoutX="15.0" layoutY="251.0" text="NOM ET PRENOM :" textFill="#572ac9" />
+      <Label layoutX="15.0" layoutY="294.0" text="QUALITE :" textFill="#2a16dd" />
+      <Label layoutX="15.0" layoutY="335.0" text="CODE APCI :" textFill="#5d1fee" />
+      <Line endX="607.2927856445312" endY="0.29290008544921875" layoutX="319.0" layoutY="85.0" startX="-100.0" />
+      <Line endX="-53.79998779296875" layoutX="104.0" layoutY="85.0" startX="-90.70710754394531" startY="0.29288482666015625" />
+      <Line endX="-99.70710754394531" endY="280.29290771484375" layoutX="112.0" layoutY="86.0" startX="-100.0" />
+      <Line endX="811.2927856445312" endY="1.16064453125" layoutX="115.0" layoutY="367.0" startX="-103.70710754394531" />
+      <Line endX="-100.00006103515625" endY="281.4535827636719" layoutX="1027.0" layoutY="86.0" startX="-100.0" />
+      <Label layoutX="444.0" layoutY="86.0" text="Actes Effectuées" textFill="#2623e4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputIdentifiant" layoutX="206.0" layoutY="207.0" promptText="5555555" />
+      <TextField fx:id="inputNom" layoutX="139.0" layoutY="247.0" prefHeight="20.0" prefWidth="117.0" promptText="NOM" />
+      <TextField fx:id="inputPrenom" layoutX="263.0" layoutY="247.0" prefHeight="20.0" prefWidth="117.0" promptText="PRENOM" />
+      <TextField fx:id="inputQualite" layoutX="167.0" layoutY="290.0" promptText="Qualité" />
+      <TextField fx:id="inputCodeApci" layoutX="167.0" layoutY="331.0" promptText="CODE APCI" />
+      <Line endX="-100.0" endY="267.8000183105469" layoutX="480.0" layoutY="92.0" startX="-100.0" startY="3.2928848266601562" />
+      <Line endX="-52.0" endY="-7.62939453125E-6" layoutX="488.0" layoutY="94.0" startX="-107.5" startY="0.7928848266601562" />
+      <Line endX="261.50006103515625" endY="-2.2071151733398438" layoutX="654.0" layoutY="95.0" startX="-100.0" />
+      <Line endX="-100.0" endY="267.8000183105469" layoutX="1016.0" layoutY="90.0" startX="-100.0" startY="3.2928848266601562" />
+      <Line endX="415.49993896484375" endY="4.300018310546875" layoutX="499.0" layoutY="356.0" startX="-118.5" startY="4.300018310546875" />
+      <Label layoutX="396.0" layoutY="132.0" text="CODE ACTE :" textFill="#222bc9" />
+      <Label layoutX="396.0" layoutY="175.0" text="COTATION :" textFill="#3e24e4" />
+      <Label layoutX="396.0" layoutY="220.0" text="MONTANT DES HONORAIRES :" textFill="#481ffc" />
+      <Label layoutX="396.0" layoutY="269.0" text="TICKET MODERATEUR PERCU DE L'ASSUREE :" textFill="#3a1eee" />
+      <Label layoutX="396.0" layoutY="322.0" text="MONTANT A LA CHARGE DE CNAM :" textFill="#3926e8" />
+      <Label layoutX="741.0" layoutY="127.0" text="CODE CONVENTIONNEL " textFill="#5224da" />
+      <TextField fx:id="inputcodeact" layoutX="501.0" layoutY="128.0" promptText="CODE ACTE" />
+      <TextField fx:id="inputcotation" layoutX="501.0" layoutY="171.0" promptText="COTATION" />
+      <TextField fx:id="inputmontantHon" layoutX="600.0" layoutY="216.0" promptText="MONTANT DES HONORAIRES" />
+      <TextField fx:id="inputticket" layoutX="718.0" layoutY="265.0" promptText="TICKET MODERATEUR PERCU DE L'ASSUREE" />
+      <TextField fx:id="inputmontantch" layoutX="718.0" layoutY="314.0" promptText="MONTANT A LA CHARGE DE CNAM " />
+      <TextField fx:id="inputcodeconven" layoutX="718.0" layoutY="150.0" prefHeight="26.0" prefWidth="180.0" promptText="CODE CONVENTIONNEL DU MEDECIN TRAITANT" />
+      <TableView fx:id="tableview" layoutX="15.0" layoutY="413.0" prefHeight="200.0" prefWidth="942.0">
+        <columns>
+          <TableColumn fx:id="datetableview" prefWidth="106.39995956420898" text="DATE DES SOINS :" />
+          <TableColumn fx:id="identifianttableview" prefWidth="79.20001220703125" text="IDENTIFIANT" />
+            <TableColumn fx:id="nomtableview" prefWidth="41.5999755859375" text="NOM" />
+            <TableColumn fx:id="prenomtableview" prefWidth="67.20002746582031" text="PRENOM" />
+            <TableColumn fx:id="qualitétableview" prefWidth="57.5999755859375" text="Qualité" />
+            <TableColumn fx:id="codeapcitableview" prefWidth="67.199951171875" text="CODE APCI" />
+            <TableColumn fx:id="codeacttableview" prefWidth="72.0" text="CODE ACTE" />
+            <TableColumn fx:id="cotationtableview" prefWidth="66.39996337890625" text="COTATION" />
+            <TableColumn fx:id="montanttableview" prefWidth="88.800048828125" text="MONTANT DES HONORAIRES" />
+            <TableColumn fx:id="ticketableview" minWidth="9.60003662109375" prefWidth="92.800048828125" text="TICKET MODERATEUR PERCU DE L'ASSUREE" />
+            <TableColumn fx:id="montanttableview" prefWidth="121.60009765625" text="MONTANT A LA CHARGE DE CNAM " />
+            <TableColumn fx:id="codetableview" prefWidth="74.39990234375" text="CODE CONVENTIONNEL DU MEDECIN TRAITANT" />
+        </columns>
+      </TableView>
+      <Button fx:id="ajouter" layoutX="242.0" layoutY="375.0" mnemonicParsing="false" onAction="#insert" prefHeight="20.0" prefWidth="101.0" style="-fx-background-color: #1E7FCB; -fx-border-radius: 50; -fx-background-radius: 50;" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="supprimer" layoutX="367.0" layoutY="375.0" mnemonicParsing="false" onAction="#Supprimer" prefHeight="20.0" prefWidth="101.0" style="-fx-background-color: #40B7F2; -fx-border-radius: 50; -fx-background-radius: 50;" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="modifier" layoutX="494.0" layoutY="375.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="20.0" prefWidth="101.0" style="-fx-background-color: #40F2F2; -fx-border-radius: 50; -fx-background-radius: 50;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="datesoins" layoutX="150.0" layoutY="122.0" prefHeight="26.0" prefWidth="150.0" promptText="yyyy-xx-zz" />
+      <Label fx:id="labelid" layoutX="167.0" layoutY="19.0" opacity="0.0" text="Label" visible="false" />
+      <Button fx:id="Confirmer" layoutX="610.0" layoutY="375.0" mnemonicParsing="false" onAction="#Confirmer" prefHeight="20.0" prefWidth="101.0" style="-fx-background-color: #40F2F2; -fx-border-radius: 50; -fx-background-radius: 50;" text="Confirmer" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Hyperlink fx:id="prec" layoutX="32.0" layoutY="20.0" onAction="#prec" text="Retour">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>
